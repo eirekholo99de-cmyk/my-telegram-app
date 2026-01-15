@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeatherNow | Portfolio Project</title>
+    <title>WeatherNow | Professional Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -12,13 +12,19 @@
     <div class="container">
         <header>
             <span class="logo">WeatherNow</span>
-            <button class="menu-btn">☰</button>
+            <div class="header-actions">
+                <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+                <div class="unit-toggle">
+                    <span id="unit-c" class="active">°C</span> | <span id="unit-f">°F</span>
+                </div>
+            </div>
         </header>
 
         <main>
             <section class="hero-section">
                 <h1>Your Local Weather Forecast</h1>
                 <div class="search-bar">
+                    <button id="location-btn" title="Use My Location">📍</button>
                     <input type="text" placeholder="Enter your city" id="city-input" spellcheck="false">
                     <button id="search-btn">Search</button>
                 </div>
@@ -28,30 +34,28 @@
                 <div class="weather-main-info">
                     <div class="location">
                         <h2 id="city-name">City Name</h2>
-                        <p id="weather-desc">Enter a city to start</p>
+                        <p id="weather-desc">Ready to search...</p>
                     </div>
                     <div class="temp-display">
                         <img src="https://openweathermap.org/img/wn/10d@2x.png" id="main-icon" alt="weather-icon">
-                        <span id="temp-value">--°C</span>
+                        <span id="temp-value">--</span><span class="degree">°</span>
                     </div>
                 </div>
                 <div class="weather-stats">
                     <div class="stat"><span>Humidity</span> <b id="humidity">--%</b></div>
-                    <div class="stat"><span>Wind</span> <b id="wind">-- km/h</b></div>
-                    <div class="stat"><span>UV Index</span> <b>Moderate</b></div>
+                    <div class="stat"><span>Wind Speed</span> <b id="wind">--</b></div>
+                    <div class="stat"><span>Condition</span> <b id="condition-text">Clear</b></div>
                 </div>
             </section>
 
             <section class="forecast-container">
                 <h3>5 Day Forecast</h3>
-                <div class="forecast-list" id="forecast-list">
-                    </div>
+                <div class="forecast-list" id="forecast-list"></div>
             </section>
         </main>
 
         <footer>
-            <p>© 2026 WeatherNow</p>
-            <p>Privacy Policy</p>
+            <p>© 2026 WeatherNow • Built by [Elijah]</p>
         </footer>
     </div>
 
