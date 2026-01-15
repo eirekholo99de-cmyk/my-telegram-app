@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow | Portfolio Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <span class="logo">WeatherNow</span>
+            <button class="menu-btn">☰</button>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <h1>Your Local Weather Forecast</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Enter your city" id="city-input" spellcheck="false">
+                    <button id="search-btn">Search</button>
+                </div>
+            </section>
+
+            <section class="current-weather">
+                <div class="weather-main-info">
+                    <div class="location">
+                        <h2 id="city-name">City Name</h2>
+                        <p id="weather-desc">Enter a city to start</p>
+                    </div>
+                    <div class="temp-display">
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" id="main-icon" alt="weather-icon">
+                        <span id="temp-value">--°C</span>
+                    </div>
+                </div>
+                <div class="weather-stats">
+                    <div class="stat"><span>Humidity</span> <b id="humidity">--%</b></div>
+                    <div class="stat"><span>Wind</span> <b id="wind">-- km/h</b></div>
+                    <div class="stat"><span>UV Index</span> <b>Moderate</b></div>
+                </div>
+            </section>
+
+            <section class="forecast-container">
+                <h3>5 Day Forecast</h3>
+                <div class="forecast-list" id="forecast-list">
+                    </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 WeatherNow</p>
+            <p>Privacy Policy</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
